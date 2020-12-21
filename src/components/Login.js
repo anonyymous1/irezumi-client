@@ -21,7 +21,6 @@ const Login = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const userData = { email, password };
-
         axios.post(`${REACT_APP_SERVER_URL}/api/users/login`, userData)
         .then(response => {
             const { token } = response.data;
@@ -36,7 +35,8 @@ const Login = (props) => {
         })
         .catch(error =>{
             console.log(error);
-        })
+            alert('Either email or password is incorrect. Please try again.');
+        });
     }
 
     if (props.user) return <Redirect to='/profile' />
