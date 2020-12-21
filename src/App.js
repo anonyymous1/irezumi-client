@@ -74,6 +74,8 @@ function App() {
             <Route exact path ="/ideas" component={ IdeaGenerator } />
             <Route exact path ="/imagesearch" component={ ImageSearch } />
             <Route exact path ="/tattooshops" component={ TattooShop } />
+            <Route exact path ="/details" component={ TattooShopDetails } />
+            <Route exact path ="/list" component={ TattooShopList } />
         </Switch>
       </div>
       <Footer/>
