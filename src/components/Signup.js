@@ -29,7 +29,7 @@ const Signup = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (password === confirmedpassword) {
+        if (password === confirmedpassword && password.length >= 8) {
             const newUser = { name, email, password };
 
             axios.post(`${REACT_APP_SERVER_URL}/api/users/register`, newUser)
@@ -40,6 +40,8 @@ const Signup = () => {
             .catch(error => {
                 console.log(error);
             })
+        } else {
+            alert('Password needs to be at least 8 characters or more. Please try again.');
         }
     }
 
