@@ -13,6 +13,7 @@ import Profile from './components/Profile'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import About from './components/About'
+import IdeaGenerator from './components/IdeaGenerator'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
