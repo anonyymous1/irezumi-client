@@ -15,6 +15,7 @@ import Login from './components/Login'
 import About from './components/About'
 import ImageSearch from './components/ImageSearch'
 import ImageDetails from './components/ImageDetails'
+import IdeaGenerator from './components/IdeaGenerator'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
