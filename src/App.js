@@ -13,6 +13,8 @@ import Profile from './components/Profile'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import About from './components/About'
+import ImageSearch from './components/ImageSearch'
+import ImageDetails from './components/ImageDetails'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
