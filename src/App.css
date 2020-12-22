@@ -28,3 +28,13 @@ li {
 .container {
   text-align: center;
 }
+
+.carousel-inner {
+  width: 800px;
+  height: 500px;
+  text-align: center;
+}
+
+h1 {
+  
+}
