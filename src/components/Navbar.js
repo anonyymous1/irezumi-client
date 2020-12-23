@@ -28,9 +28,6 @@ const Navbar = (props) => {
                                 <NavLink className="nav-link"  to="/imagesearch">Image Search</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link"  to="/ideas">Idea Generator</NavLink>
-                            </li>
-                            <li className="nav-item">
                                 <NavLink className="nav-link"  to="/profile">Profile</NavLink>
                             </li>
                             <li className="nav-item">

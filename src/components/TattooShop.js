@@ -59,14 +59,14 @@ const TattooShop = () => {
             </form>
             <div>
                 <h1>Major Cities</h1>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="dropdown">
+                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Top Cities
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#" >New York City</a>
-                        <a class="dropdown-item" href="#">las Vegas</a>
-                        <a class="dropdown-item" href="#">los Angeles</a>
+                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <p className="dropdown-item" href="#" >New York City</p>
+                        <p className="dropdown-item" href="#">Las Vegas</p>
+                        <p className="dropdown-item" href="#">Los Angeles</p>
                     </div>
                 </div>
             </div>
