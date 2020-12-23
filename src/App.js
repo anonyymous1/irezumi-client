@@ -10,11 +10,12 @@ import Welcome from './components/Welcome'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Profile from './components/Profile'
+import ProfileEdit from './components/ProfileEdit'
 import Signup from './components/Signup'
 import Login from './components/Login'
 import About from './components/About'
 import ImageSearch from './components/ImageSearch'
-import ImageDetails from './components/ImageDetails'
+// import ImageDetails from './components/ImageDetails'
 import IdeaGenerator from './components/IdeaGenerator'
 import TattooShop from './components//TattooShop'
 import TattooShopList from './components/TattooShopList'
@@ -76,6 +77,7 @@ function App() {
             <Route exact path ="/tattooshops" component={ TattooShop } />
             <Route exact path ="/details" component={ TattooShopDetails } />
             <Route exact path ="/list" component={ TattooShopList } />
+            <PrivateRoute path ="/profileedit" component={ ProfileEdit } user={currentUser}/>
         </Switch>
       </div>
       <Footer/>

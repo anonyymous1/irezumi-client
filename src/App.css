@@ -35,6 +35,9 @@ li {
   text-align: center;
 }
 
-h1 {
-  
+.old-email {
+  font-size: 11px;
+  color: grey;
+  margin-bottom: 5px;
+  margin-top: 20px;
 }
