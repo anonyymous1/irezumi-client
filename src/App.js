@@ -15,8 +15,6 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import About from './components/About'
 import ImageSearch from './components/ImageSearch'
-// import ImageDetails from './components/ImageDetails'
-import IdeaGenerator from './components/IdeaGenerator'
 import TattooShop from './components//TattooShop'
 import TattooShopList from './components/TattooShopList'
 import TattooShopDetails from './components/TattooShopDetails'
@@ -72,7 +70,6 @@ function App() {
             <Route path='/about' component={ About } />
             <PrivateRoute path='/profile' component={ Profile } user={currentUser} />
             <Route exact path ="/" component={ Welcome } />
-            <Route exact path ="/ideas" component={ IdeaGenerator } />
             <Route exact path ="/imagesearch" component={ ImageSearch } />
             <Route exact path ="/tattooshops" component={ TattooShop } />
             <Route exact path ="/details" component={ TattooShopDetails } />
