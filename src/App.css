@@ -42,14 +42,11 @@ li {
   margin-top: 20px;
 }
 
-<<<<<<< HEAD
-=======
 .error-image {
   width: 100%;
   margin: auto;
   display: block;
 }
-
 .card {
   width: 180px;
   height: 300px;
@@ -58,12 +55,10 @@ li {
 .card-img-top {
   height: 120px;
 }
-
 .card-div {
   display: flex;
   justify-content: space-between;
 }
-
 .welcome-text {
   position: absolute;
   margin-top: 250px;
@@ -72,13 +67,10 @@ li {
   color: whitesmoke;
   z-index: 1;
 }
-
 img {
   border-radius: 5px;
 }
-
 .top-five-h1 {
   margin-top: 35px;
   margin-bottom: 10px;
 }
->>>>>>> 6af130556f6119630b59e4a1b06223044b433931
