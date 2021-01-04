@@ -18,6 +18,7 @@ import ImageSearch from './components/ImageSearch'
 import TattooShop from './components//TattooShop'
 import TattooShopList from './components/TattooShopList'
 import TattooShopDetails from './components/TattooShopDetails'
+import NotFoundPage from './components/NotFoundPage'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -75,6 +76,7 @@ function App() {
             <Route exact path ="/details" component={ TattooShopDetails } />
             <Route exact path ="/list" component={ TattooShopList } />
             <PrivateRoute path ="/profileedit" component={ ProfileEdit } user={currentUser}/>
+            <Route path="*" component={NotFoundPage} />
         </Switch>
       </div>
       <Footer/>
