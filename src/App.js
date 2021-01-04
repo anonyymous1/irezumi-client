@@ -18,6 +18,7 @@ import ImageSearch from './components/ImageSearch'
 import TattooShop from './components//TattooShop'
 import TattooShopList from './components/TattooShopList'
 import TattooShopDetails from './components/TattooShopDetails'
+import Favorites from './components/Favorites'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -74,6 +75,7 @@ function App() {
             <Route exact path ="/tattooshops" component={ TattooShop } />
             <Route exact path ="/details" component={ TattooShopDetails } />
             <Route exact path ="/list" component={ TattooShopList } />
+            <Route exact path ="/favorites"component={ Favorites }/>
             <PrivateRoute path ="/profileedit" component={ ProfileEdit } user={currentUser}/>
         </Switch>
       </div>
