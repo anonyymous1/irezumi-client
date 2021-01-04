@@ -47,25 +47,35 @@ li {
   margin: auto;
   display: block;
 }
-/*
-Removes white gap between slides
-*/
-.carousel {
-  background:#444;
+
+.card {
+  width: 180px;
+  height: 300px;
+  margin-bottom: 25px;
+}
+.card-img-top {
+  height: 120px;
 }
 
-/*
-Forces image to be 100% width and not max width of 100%
-*/
-.carousel-item .img-fluid {
-  width:100%;
-  height:auto;
+.card-div {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* 
-anchors are inline so you need ot make them block to go full width
-*/
-.carousel-item a {
-  display: block;
-  width:100%;
+.welcome-text {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 5%;
+  width: 900px;
+  color: whitesmoke;
+  z-index: 1;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.top-five-h1 {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
