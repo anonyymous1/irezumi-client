@@ -11,7 +11,7 @@ const Welcome = () => {
         .then(res =>{
             setTopFive(res.data.foundShops.map((s, idx) => {
                 return(
-                    <div className="card">
+                    <div className="card2" key={idx}>
                         <img src={s.imageURL} className="card-img-top" alt={s.name}/>
                     <div className="card-body">
                     <div>
@@ -31,8 +31,8 @@ const Welcome = () => {
     return (
         <div>
         <div className="welcome-text">
-        <h1>Welcome To Irezumi 入れ墨</h1>
-        <h3>At Irezumi you can find the best parlors and artists around as well as gain some inspiration for tattoos that you want and the best places to go to get them done.</h3>
+        <h1>Irezumi 入れ墨</h1>
+        <h3 className="front-desc">Welcome, at Irezumi you can find the best parlors and artists around as well as gain some inspiration for tattoos that you want and the best places to go to get them done.</h3>
         </div>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
