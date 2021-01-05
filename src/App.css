@@ -4,6 +4,11 @@ html {
 }
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
+  width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
 }
 .footer {
   position: absolute;
@@ -27,12 +32,7 @@ li {
 
 .container {
   text-align: center;
-}
-
-.carousel-inner {
-  width: 800px;
-  height: 500px;
-  text-align: center;
+  width: 100%;
 }
 
 .old-email {
@@ -40,4 +40,37 @@ li {
   color: grey;
   margin-bottom: 5px;
   margin-top: 20px;
+}
+
+.error-image {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.card {
+  width: 180px;
+  height: 300px;
+  margin-bottom: 25px;
+}
+.card-img-top {
+  height: 120px;
+}
+.card-div {
+  display: flex;
+  justify-content: space-between;
+}
+.welcome-text {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 5%;
+  width: 900px;
+  color: whitesmoke;
+  z-index: 1;
+}
+img {
+  border-radius: 5px;
+}
+.top-five-h1 {
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
