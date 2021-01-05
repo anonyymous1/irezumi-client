@@ -72,6 +72,7 @@ function App() {
             <Route exact path ="/" component={ Welcome } />
             <Route exact path ="/imagesearch" component={ ImageSearch } />
             <Route exact path ="/tattooshops" component={ TattooShop } />
+            <Route exact path ="/favorites" component={ Favorites } />
             <PrivateRoute path ="/profileedit" component={ ProfileEdit } user={currentUser}/>
             <Route path="*" component={NotFoundPage} />
         </Switch>
