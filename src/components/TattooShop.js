@@ -7,7 +7,44 @@ const TattooShop = () => {
     const [searchBar, setSearchBar] = useState('')
     const [searchResults, setSearchResults] = useState('')
 
-    
+    const majorCity = (e) => {
+        // console.log('majorCity')
+        // console.log(e.target.innerHTML);
+        e.preventDefault()
+        setSearchBar(e.target.innerHTML)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${searchBar}`, {
+            headers: {
+                Authorization: `Bearer ${keys.API_KEY}`
+            },
+            params: {
+                term: 'tattoo'
+            }
+        })
+        .then(result => {
+            const shops = result.data.businesses;
+            console.log(shops);
+            setSearchResults( shops.map((i, idx) => {
+                return (
+                    <div className="row" key={idx}>
+                        <div className="card5">
+                        <h5 className="card-title">{i.name}</h5>
+                            <p>
+                                {i.location.display_address[0]}<br></br>
+                                {i.location.display_address[1]}<br></br>
+                            </p>
+                        <p>Price: {i.price}</p>
+                        <p>Rating: {i.rating}</p>
+                        <a className="shopname" href={i.url}>{i.name}</a>
+                        </div>
+                    </div>
+                )
+            }))
+            // setSearchResults(result)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
     
     
     const handleSubmit = (e) => {
@@ -29,17 +66,18 @@ const TattooShop = () => {
             console.log(shops);
             setSearchResults( shops.map((i, idx) => {
                 return (
-                   <div key={idx}>
-                       <h3>{i.name}</h3>
-                       <p>{i.display_phone}</p>
-                       <p>
-                            {i.location.display_address[0]}<br></br>
-                            {i.location.display_address[1]}<br></br>
-                            {i.location.display_address[2]} 
-                        </p>
-                       <p>Price: {i.price}</p>
-                       <p>Rating: {i.rating}</p>
-                   </div> 
+                    <div className="row" key={idx}>
+                        <div className="card5">
+                        <h5 className="card-title">{i.name}</h5>
+                            <p>
+                                {i.location.display_address[0]}<br></br>
+                                {i.location.display_address[1]}<br></br>
+                            </p>
+                        <p>Price: {i.price}</p>
+                        <p>Rating: {i.rating}</p>
+                        <a className="shopname" href={i.url}>{i.name}</a>
+                        </div>
+                    </div>
                 )
             }))
             // setSearchResults(result)
@@ -52,23 +90,19 @@ const TattooShop = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h1>City Search</h1>
+                <h1 className="cities">City Search</h1>
                 <label htmlFor="search"/>
-                <input type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } />
-                <input type="submit" value="Search"/>
+                <input type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } /><br/>
+                <input className="btn btn-outline-danger" type="submit" value="Search"/>
             </form>
-            <div>
-                <h1>Major Cities</h1>
-                <div className="dropdown">
-                    <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Top Cities
-                    </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <p className="dropdown-item" href="#" >New York City</p>
-                        <p className="dropdown-item" href="#">Las Vegas</p>
-                        <p className="dropdown-item" href="#">Los Angeles</p>
-                    </div>
-                </div>
+            <div className="majorcitieslist">
+                <h5 className="cities">Major Cities</h5>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">Texas</p>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">New York City</p>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">Las Vegas</p>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">Los Angeles</p>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">San Francisco</p>
+                <p onClick={e => majorCity(e)} className="dropdown-item2" href="#">Seattle</p>
             </div>
             <div>
                 {searchResults}

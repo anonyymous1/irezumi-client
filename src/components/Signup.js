@@ -48,7 +48,7 @@ const Signup = () => {
     if (redirect) return <Redirect to="/login" />
   
     return (
-        <div className="row mt-4">
+        <div className="row2 mt-4">
             <div className="col-md-7 offset-md-3">
                 <div className="card card-body">
                     <h2>Sign Up</h2>
