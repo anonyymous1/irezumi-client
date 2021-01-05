@@ -8,6 +8,8 @@ const ProfileEdit = (props) => {
     // console.log(props);
     const [newEmail, setNewEmail] = useState('')
     const [newName, setNewName] = useState('')
+    const [imageUrl, setImageUrl] = useState('')
+    const [imageAlt, setImageAlt] = useState('')
     const [redirect, setRedirect] = useState('')
 
     const dataChange = (e) => {
@@ -39,6 +41,32 @@ const ProfileEdit = (props) => {
         setNewEmail(e.target.value)
     }
 
+    const handleImageUpload = (e) => {
+        e.preventDefault();
+        console.log('button works');
+        const { files } = document.querySelector('input[type="file"]')
+        const formData = new FormData();
+        formData.append('file', files[0]);
+        formData.append('upload_preset', 'ivgbzzgb');
+        const options = {
+            method: 'POST',
+            body: formData,
+        };
+        return fetch('https://api.cloudinary.com/v1_1/alexbustillos/image/upload', options)
+        .then(res => res.json())
+        .then(res => {
+            const userID = props.user.id
+            const url = res.secure_url
+            const edit = { userID, url }
+            axios.put(`${REACT_APP_SERVER_URL}/api/users/updateProfile`, edit)
+        .then(res =>{
+            setRedirect(true)
+        })           
+        })
+        .catch(err => console.log(err));
+        
+        
+    }
     return(
         <div>
             <h3>Profile Edit Page</h3>
@@ -52,6 +80,20 @@ const ProfileEdit = (props) => {
                 <div>
                 <input type="submit" value="Update Profile"  onClick={dataChange}/>
                 </div>
+                <section className="left-side">
+                    <div className="form-group">
+                        <input type="file"/>
+                    </div>
+                    <button type="button" className="btn" onClick={handleImageUpload}>Submit</button>
+                    <button type="button" className="btn widget-btn">Upload Via Widget</button>
+                </section>
+                <section className="right-side">
+                    <p>The result is here</p>
+                    {imageUrl && (
+                        <img src="{imageUrl}" alt="{imageAlt}" className="displayed-image"/>
+                    )}
+                </section>
+
                 <div>
                     <h4>Changes will take effect the next time you log in.</h4>
                 </div>

@@ -57,7 +57,6 @@ li {
 .card-img-top {
   height: 120px;
 }
-
 .card-div {
   display: flex;
   justify-content: space-between;
@@ -76,11 +75,9 @@ li {
   z-index: 1;
   font-family: 'Yeon Sung', cursive;
 }
-
 img {
   border-radius: 5px;
 }
-
 .top-five-h1 {
   margin-top: 35px;
   margin-bottom: 10px;

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios';
-import keys from '../Keys';
+// import keys from '../Keys';
 
 const TattooShop = () => {
     
@@ -55,7 +55,7 @@ const TattooShop = () => {
         // const corsApiUrl = 'https://cors-anywhere.herokuapp.com/';
         axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${searchBar}`, {
             headers: {
-                Authorization: `Bearer ${keys.API_KEY}`
+                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
             },
             params: {
                 term: 'tattoo'
