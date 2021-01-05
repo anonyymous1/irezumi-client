@@ -12,7 +12,7 @@ const Profile = (props) => {
                 
                 <p><strong>Name:</strong> { props.user.name } </p>
                 <p><strong>Email:</strong> { props.user.email } <Link to="/profileedit">edit</Link></p>
-                {/* <p><strong>ID:</strong> { props.user.id } </p> */}
+                <h3><Link to="/favorites">My Favorites</Link></h3>
 
             </div>
 
