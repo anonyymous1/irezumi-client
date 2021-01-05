@@ -9,6 +9,7 @@ body {
   margin-left: 0;
   padding-right: 0;
   margin-right: 0;
+  background-color: black;
 }
 .footer {
   position: absolute;
@@ -47,8 +48,9 @@ li {
   margin: auto;
   display: block;
 }
-.card {
-  width: 180px;
+
+.card2 {
+  width: 218px;
   height: 300px;
   margin-bottom: 25px;
 }
@@ -59,6 +61,11 @@ li {
   display: flex;
   justify-content: space-between;
 }
+
+.majorcitieslist {
+  display: inline;
+}
+
 .welcome-text {
   position: absolute;
   margin-top: 250px;
@@ -66,6 +73,7 @@ li {
   width: 900px;
   color: whitesmoke;
   z-index: 1;
+  font-family: 'Yeon Sung', cursive;
 }
 img {
   border-radius: 5px;
@@ -74,3 +82,91 @@ img {
   margin-top: 35px;
   margin-bottom: 10px;
 }
+
+.dropdown-item2 {
+  color: rgb(124, 0, 0);
+  justify-content: space-around;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
+  border: rgb(124, 0, 0) 1px solid;
+  border-radius: 10px;
+  display: inline;
+}
+
+.title {
+  font-family: 'Yeon Sung', cursive;
+  color: whitesmoke;
+  margin-top: 20px;
+}
+
+.about-div {
+  border:whitesmoke 1px solid;
+  border-radius: 5px;
+  width: 100px;
+  padding: 50px 250px 50px 250px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.about-dev {
+  border:whitesmoke 1px solid;
+  border-radius: 5px;
+  width: 100px;
+  padding: 50px 75px 50px 75px;
+  display: inline;
+  margin-top: 100px;
+}
+
+.card3 {
+  width: 180px;
+}
+
+.row-dev {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns:  repeat(5, 250px);
+  justify-items: center;
+}
+
+.github-img {
+  position: relative;
+  width: 30px;
+  margin-top: -20px;
+}
+
+.card-title-dev {
+  font-family: 'Staatliches', cursive;
+  color: purple;
+}
+
+.front-desc {
+  font-family: 'Staatliches', cursive;
+}
+
+.card5 {
+  width: 280px;
+  background-color: rgb(58, 58, 58);
+  font-family: 'Staatliches', cursive;
+  color: whitesmoke;
+  border-radius: 10px;
+  margin: 20px;
+  padding-top: 10px;
+}
+
+.row {
+  display:inline-block
+}
+
+.top-five-h1 {
+  font-family: 'Yeon Sung', cursive;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+.cities {
+  color: whitesmoke;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+

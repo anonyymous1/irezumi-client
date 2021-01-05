@@ -16,8 +16,6 @@ import Login from './components/Login'
 import About from './components/About'
 import ImageSearch from './components/ImageSearch'
 import TattooShop from './components//TattooShop'
-import TattooShopList from './components/TattooShopList'
-import TattooShopDetails from './components/TattooShopDetails'
 import NotFoundPage from './components/NotFoundPage'
 import Favorites from './components/Favorites'
 
@@ -74,9 +72,6 @@ function App() {
             <Route exact path ="/" component={ Welcome } />
             <Route exact path ="/imagesearch" component={ ImageSearch } />
             <Route exact path ="/tattooshops" component={ TattooShop } />
-            <Route exact path ="/details" component={ TattooShopDetails } />
-            <Route exact path ="/list" component={ TattooShopList } />
-            <Route exact path ="/favorites"component={ Favorites }/>
             <PrivateRoute path ="/profileedit" component={ ProfileEdit } user={currentUser}/>
             <Route path="*" component={NotFoundPage} />
         </Switch>
