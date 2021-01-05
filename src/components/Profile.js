@@ -6,10 +6,18 @@ const Profile = (props) => {
     const userData = props.user ?
     (<div>
         <h1>Profile</h1>
-        <p><strong>Name:</strong> { props.user.name } </p>
-        <p><strong>Email:</strong> { props.user.email } <Link to="/profileedit">edit</Link></p>
-        <p><strong>ID:</strong> { props.user.id } </p>
-        <img src={props.user.imageURL} alt={props.user.name}/>
+        <div>
+            <img src={props.user.imageURL} alt={props.user.name}/>
+            <div>
+                
+                <p><strong>Name:</strong> { props.user.name } </p>
+                <p><strong>Email:</strong> { props.user.email } <Link to="/profileedit">edit</Link></p>
+                {/* <p><strong>ID:</strong> { props.user.id } </p> */}
+
+            </div>
+
+        </div>
+        
     </div>) : <h4>Loading...</h4>
 
     const errorDiv = () => {

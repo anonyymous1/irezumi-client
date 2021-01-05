@@ -10,6 +10,7 @@ body {
   padding-right: 0;
   margin-right: 0;
   background-color: black;
+  color: whitesmoke;
 }
 .footer {
   position: absolute;
@@ -170,3 +171,21 @@ img {
   margin-bottom: 15px;
 }
 
+h1 {
+  font-family: 'Yeon Sung', cursive;
+  color: whitesmoke;
+  font-size: 100px;
+}
+
+a {
+  color: purple;
+}
+
+a:hover {
+  background-color: purple;
+  color: black;
+}
+
+.profilestyle {
+  font-family: 'Courier New', Courier, monospace;
+}
