@@ -319,6 +319,21 @@ label {
   padding:5px 30px 5px 30px;
 }
 
+.btn-image1 {
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  padding:5px 10px 5px 10px;
+}
+
+.btn-image2 {
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding:5px 5px 5px 5px;
+}
+
 .shopname {
   font-size: 20px;
 }
@@ -340,4 +355,20 @@ label {
 .navbar-brand {
   border-radius: 10px;
   padding:5px;
+}
+
+.disclaimer {
+  font-size: 20px;
+  opacity: .5;
+  margin-top: 50px;
+}
+
+.new-email-box {
+  margin-bottom: 25px;
+}
+
+.old-email2 {
+  font-size: 11px;
+  color: grey;
+  margin-bottom: 5px;
 }
