@@ -37,27 +37,28 @@ const ImageSearch = () => {
     return(
         <div className="container">
             <form onSubmit={handleSubmit}>
-                <h1>Image Search</h1>
-                <label htmlFor="search"/>
-                <input type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } />
-                <input type="submit" value="Search"/>
-            </form>
-                
+                <h1 className="title">Image Search</h1>
+                <div className="hr"></div>
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {dropdown}
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Leg') }>Leg</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Foot') }>Foot</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Wrist') }>Wrist</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Ankle') }>ankle</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Chest') }>Chest</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Arm') }>Arm</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Back') }>Back</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Face') }>Face</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Hand') }>Hand</button>
-                    <button class="dropdown-item" type="button" onClick={ e => setDropdown('Thigh') }>Thigh</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Leg') }>Leg</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Foot') }>Foot</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Wrist') }>Wrist</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Ankle') }>Ankle</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Chest') }>Chest</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Arm') }>Arm</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Back') }>Back</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Face') }>Face</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Hand') }>Hand</button>
+                    <button className="dropdown-item" type="button" onClick={ e => setDropdown('Thigh') }>Thigh</button>
                 </div>
+                <label htmlFor="search"/>
+                <input className="searchbar-box" type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } />
+                <input className="btn btn-secondary dropdown-toggle" type="submit" value="Search"/>
+            </form>
+                
 
 
             <div>

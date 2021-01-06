@@ -13,6 +13,7 @@ body {
   color: whitesmoke;
 }
 .footer {
+  opacity: .35;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -54,6 +55,10 @@ li {
   width: 218px;
   height: 300px;
   margin-bottom: 25px;
+  border: rgba(128, 0, 128, 0.37) 1px solid;
+  border-radius: 20px;
+  overflow: hidden;
+
 }
 .card-img-top {
   height: 120px;
@@ -85,14 +90,26 @@ img {
 }
 
 .dropdown-item2 {
-  color: rgb(124, 0, 0);
+  color: purple;
   justify-content: space-around;
   padding: 0px 20px 0px 20px;
   margin: 0px 20px 0px 20px;
-  border: rgb(124, 0, 0) 1px solid;
+  border: purple 1px solid;
   border-radius: 10px;
   display: inline;
 }
+
+.dropdown-item2:hover {
+  color: purple;
+  justify-content: space-around;
+  padding: 0px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
+  border: purple 1px solid;
+  border-radius: 10px;
+  display: inline;
+  cursor: pointer;
+}
+
 
 .title {
   font-family: 'Yeon Sung', cursive;
@@ -100,13 +117,11 @@ img {
   margin-top: 20px;
 }
 
-.about-div {
-  border:whitesmoke 1px solid;
-  border-radius: 5px;
-  width: 100px;
-  padding: 50px 250px 50px 250px;
-  display: inline-block;
-  margin: 5px;
+.title1{
+  font-family: 'Yeon Sung', cursive;
+  color: whitesmoke;
+  margin-top: -10px;
+  font-size: 100px;
 }
 
 .about-dev {
@@ -131,22 +146,36 @@ img {
 
 .github-img {
   position: relative;
-  width: 30px;
+  width: 40px;
+  margin-top: -20px;
+}
+
+.linkedin-img {
+  position: relative;
+  width: 36px;
   margin-top: -20px;
 }
 
 .card-title-dev {
   font-family: 'Staatliches', cursive;
   color: purple;
+  font-size: 23px;
 }
 
 .front-desc {
   font-family: 'Staatliches', cursive;
 }
 
+.desc {
+  font-size: 10px;
+  opacity: .45;
+  margin-top: -8px;
+}
+
 .card5 {
   width: 280px;
-  background-color: rgb(58, 58, 58);
+  height: 270px;
+  background-color: rgb(122, 122, 122);
   font-family: 'Staatliches', cursive;
   color: whitesmoke;
   border-radius: 10px;
@@ -157,6 +186,11 @@ img {
 .row {
   display:inline-block
 }
+
+.row2 {
+  color: black;
+}
+
 
 .top-five-h1 {
   font-family: 'Yeon Sung', cursive;
@@ -171,12 +205,6 @@ img {
   margin-bottom: 15px;
 }
 
-h1 {
-  font-family: 'Yeon Sung', cursive;
-  color: whitesmoke;
-  font-size: 100px;
-}
-
 a {
   color: purple;
 }
@@ -188,4 +216,128 @@ a:hover {
 
 .profilestyle {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.imageHolder {
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.profile-img {
+  margin-top: 20px;
+  width:200px
+}
+
+.user-info {
+  background-color: rgb(12, 12, 12);
+  border-radius: 25px;
+  width: 400px;
+  padding: 20px 0px 5px 0px;
+  margin-bottom: 20px;
+}
+
+.dev-p {
+  width: 600px;
+}
+
+.about-img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 75px
+}
+
+.about-div {
+  border:purple 1px solid;
+  border-radius: 25px;
+  width: 500px;
+  height: 250px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.about-text {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+.about-title {
+  color: purple;
+}
+
+.hr {
+  background-color: purple;
+  height: 1px;
+  border: purple 1px solid;
+  margin-bottom: 25px;
+  opacity: .5;
+}
+
+.dropdown-toggle {
+  background-color: purple;
+  color: white;
+  border: none;
+  width:125px;
+  height: 35px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.searchbar-box {
+  height: 35px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+form {
+  margin: 25px;
+}
+
+.card-signup {
+  background-color: rgb(29, 29, 29);
+  height: 525px;
+  border-radius: 20px;
+  border: purple solid 1px;
+}
+
+.card-login {
+  background-color: rgb(29, 29, 29);
+  height: 350px;
+  border-radius: 20px;
+  border: purple solid 1px;
+}
+
+label {
+  color: white;
+}
+
+.btn-signup {
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  padding:5px 30px 5px 30px;
+}
+
+.shopname {
+  font-size: 20px;
+}
+.btn-faves {
+  background-color: purple;
+  color: white;
+  border:none;
+  border-radius: 10px;
+  width:125px;
+  height: 35px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.nav-link {
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  border-radius: 10px;
+  padding:5px;
 }

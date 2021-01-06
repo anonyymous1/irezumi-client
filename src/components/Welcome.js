@@ -15,7 +15,7 @@ const Welcome = () => {
                         <img src={s.imageURL} className="card-img-top" alt={s.name}/>
                     <div className="card-body">
                     <div>
-                        <a className="shopname" href={s.url}>{s.name}</a>
+                        <a className="shopname1" href={s.url}>{s.name}</a>
                     </div>
                         <p className="card-text">{s.address}</p>
                         <p className="card-text">{s.phone}</p>
@@ -31,7 +31,8 @@ const Welcome = () => {
     return (
         <div>
         <div className="welcome-text">
-        <h1>Irezumi 入れ墨</h1>
+        <h1 className="title1">Irezumi 入れ墨</h1>
+        <div className="hr"></div>
         <h3 className="front-desc">Welcome, at Irezumi you can find the best parlors and artists around as well as gain some inspiration for tattoos that you want and the best places to go to get them done.</h3>
         </div>
         <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
@@ -66,6 +67,7 @@ const Welcome = () => {
             <h1 className="top-five-h1">
                 Irezumi's Top 5 of the Month
             </h1>
+            <div className="hr"></div>
         </div>
         <div className="card-div">
             {topFive}

@@ -109,7 +109,7 @@ const ProfileEdit = (props) => {
                 <section className="right-side">
                     <p>The result is here</p>
                     {imageUrl && (
-                        <img  target="_blank" src={imageUrl} alt={imageAlt} className="displayed-image"/>
+                        <img target="_blank" src={imageUrl} alt={imageAlt} className="displayed-image"/>
                     )}
                 </section>
 
