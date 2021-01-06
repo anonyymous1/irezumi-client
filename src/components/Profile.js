@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
 
-    console.log(props.user.imageURL);
+    console.log(props.user.id);
     const userData = props.user ?
     (<div>
         <h1>Profile</h1>
@@ -12,7 +12,7 @@ const Profile = (props) => {
                 
                 <p><strong>Name:</strong> { props.user.name } </p>
                 <p><strong>Email:</strong> { props.user.email } <Link to="/profileedit">edit</Link></p>
-                <h3><Link to="/favorites">My Favorites</Link></h3>
+                <h3><Link value={props.user.id} to="/favorites">My Favorites</Link></h3>
 
             </div>
 
