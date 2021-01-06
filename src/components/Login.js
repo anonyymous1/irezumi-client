@@ -44,8 +44,9 @@ const Login = (props) => {
     return (
         <div className="row2 mt-4">
             <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
-                    <h2 className="py-2">Login</h2>
+                <div className="card-login card-body">
+                    <h2 className="title">Login</h2>
+                    <div className="hr"></div>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
@@ -55,7 +56,7 @@ const Login = (props) => {
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
                         </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
+                        <button type="submit" className="btn-signup btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

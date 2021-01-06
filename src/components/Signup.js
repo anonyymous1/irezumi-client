@@ -50,8 +50,9 @@ const Signup = () => {
     return (
         <div className="row2 mt-4">
             <div className="col-md-7 offset-md-3">
-                <div className="card card-body">
-                    <h2>Sign Up</h2>
+                <div className="card-signup card-body">
+                    <h2 className="title">Create Account</h2>
+                    <div className="hr"></div>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
@@ -69,7 +70,7 @@ const Signup = () => {
                             <label htmlFor="confirmedPassword">Confirmed Password</label>
                             <input type="password" name="confirmedPassword" value={confirmedpassword} onChange={handleConfirmedPassword} className="form-control"/>
                         </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
+                        <button type="submit" className="btn-signup btn-primary">Submit</button>
                     </form>
                 </div>
             </div>
