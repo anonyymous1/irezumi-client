@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
 
-    console.log(props.user.imageURL);
+    console.log(props.user.id);
     const userData = props.user ?
     (<div className="row">
         <h1 className="title">Profile</h1>
