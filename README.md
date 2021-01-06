@@ -65,13 +65,68 @@ Remember to create branches at first was really hard when you are so zoned in on
 ### Peak at my Code
 
 PEEK OF SOME HTML CODE FOR A DISPLAY PAGE
-```html
+```<div>
+        <div className="welcome-text">
+        <h1>Irezumi 入れ墨</h1>
+        <h3 className="front-desc">Welcome, at Irezumi you can find the best parlors and artists around as well as gain some inspiration for tattoos that you want and the best places to go to get them done.</h3>
+        </div>
+        <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src="https://i.imgur.com/Ve172Bu.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/hPNE1fq.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/nr6ZQC9.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/kBAWQx5.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/OYBg6uq.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/FtQ4TkC.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/0cRREaB.png" className="d-block w-100" alt="..."></img>
+                </div>
+                <div className="carousel-item">
+                    <img src="https://i.imgur.com/nesRUd6.png" className="d-block w-100" alt="..."></img>
+                </div>
 ```
 CSS STYLING ADDED TO BOOTSTRAP COMPONENTS
-```css
+```.welcome-text {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 5%;
+  width: 900px;
+  color: whitesmoke;
+  z-index: 1;
+  font-family: 'Yeon Sung', cursive;
+}
+img {
+  border-radius: 5px;
+}
+.top-five-h1 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
 ```
 PEEK AT CODE THAT FINDS OR CREATES STYLE AND USER INTO TWO TABLES
-```js
+```router.put('/update', (req, res)=> {
+    db.User.findOneAndUpdate(
+        {_id: req.body.userID},
+        {email: req.body.email, name:req.body.name, imageURL: req.body.url}, // Changed in MongoDB 4.2
+        {
+          upsert: true
+        }
+     ).then(res =>{
+        console.log('successful', res);
+     })
+})
 ```
 
 ### Future
