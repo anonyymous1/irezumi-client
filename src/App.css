@@ -58,8 +58,8 @@ li {
   border: rgba(128, 0, 128, 0.37) 1px solid;
   border-radius: 20px;
   overflow: hidden;
-
 }
+
 .card-img-top {
   height: 120px;
 }
@@ -371,4 +371,50 @@ label {
   font-size: 11px;
   color: grey;
   margin-bottom: 5px;
+}
+
+.comment-card {
+  width: 218px;
+  height: 200px;
+  margin-bottom: 25px;
+  border: rgba(128, 0, 128, 0.37) 1px solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cardcomment {
+  font-size: 12px;
+  margin-top: -20px;
+}
+
+.fav-name {
+  font-family: 'Staatliches', cursive;
+}
+
+.fav-box {
+  width: 400px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.post-comment {
+  width: 600px;
+  height: 275px;
+  margin-bottom: 25px;
+  border: rgba(128, 0, 128, 0.37) 1px solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.post-comment-title {
+  font-family: 'Staatliches', cursive;
+  margin-top: 15px;
+}
+
+.btn-signup2 {
+  background-color: purple;
+  border: none;
+  border-radius: 10px;
+  padding:5px 30px 5px 30px;
+  margin-top: 55px;
 }

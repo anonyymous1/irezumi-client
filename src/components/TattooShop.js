@@ -6,7 +6,6 @@ const TattooShop = () => {
     
     const [searchBar, setSearchBar] = useState('')
     const [searchResults, setSearchResults] = useState('')
-    const [fave, setFave] = useState('')
 
     const majorCity = (e) => {
         e.preventDefault()
@@ -34,9 +33,6 @@ const TattooShop = () => {
                             </p>
                         <p>Price: {i.price}</p>
                         <p>Rating: {i.rating}</p>
-                        <button className="btn-faves" onClick={
-                            setFave(i.name)
-                        }>Add to Faves</button>
                         </div>
                     </div>
                 )
@@ -73,9 +69,6 @@ const TattooShop = () => {
                             </p>
                         <p>Price: {i.price}</p>
                         <p>Rating: {i.rating}</p>
-                        <button className="btn-faves" onClick={
-                            setFave(i.name)
-                        }>Add to Faves</button>
                         </div>
                     </div>
                 )

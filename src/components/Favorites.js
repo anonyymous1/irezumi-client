@@ -8,13 +8,7 @@ const Favorites = (props) => {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
     const [redirect, setRedirect] = useState('')
-    
-    
-    console.log(props);
-    const userID = props.user.id
-
-
-
+  
     useEffect(() => {
         const userId = props.user.id
         axios.get(`${REACT_APP_SERVER_URL}/api/users/all`)
@@ -25,8 +19,12 @@ const Favorites = (props) => {
             const newFavList = await filterList.map((val, key) => {
                 return(
                         <div key={key}>
-                            <h2>{val.title}</h2>
-                            <p>{val.content}</p>
+                        <div className="comment-card">
+                            <h3>{val.title}</h3>
+                            <div className="hr"></div> 
+                            <p className="cardcomment">{val.content}</p>
+                            <button className="btn-signup2" onClick={handleDelete}>Delete</button>
+                        </div>
                         </div>)})
             setFavList(newFavList);
         })
@@ -54,21 +52,48 @@ const Favorites = (props) => {
         })
     }
 
+    const handleDelete = (e) => {
+        e.preventDefault();
+        const userId = props.user.id
+        const data = { userId, title, content };
+        console.log(props.user);
+        axios.delete(`${REACT_APP_SERVER_URL}/api/users/favorites/:id`, data)
+        .then(response => {
+            console.log(response);
+            setRedirect(true)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
     if (redirect) return <Redirect to="/favorites" />
 
     return(
-        <div>
-            <h1>Your Favorites</h1> 
-            {favList}
+        <div className="row">
+            <h1 className="title">Your Favorites</h1>
+            <div className="hr"></div> 
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="title">Title</label>
-                    <input type="text" name="title" value={title} onChange={handleTitle} className="form-control" />
-                    <label htmlFor="content">Content</label>
-                    <input type="text" name="content" value={content} onChange={handleContent} className="form-control" />
+                <div className="post-comment">
+                    <div>
+                    <h3 className="post-comment-title">Save Your Idea</h3>
+                    <label className="fav-name" htmlFor="title">Title</label>
+                    </div>
+                    <div>
+                    <input className="fav-box" type="text" name="title" value={title} onChange={handleTitle}/>
+                    </div>
+                    <div>
+                    <label className="fav-name" htmlFor="content">Content</label>
+                    </div>
+                    <div>
+                    <input className="fav-box" type="text" name="content" value={content} onChange={handleContent}/>
+                    </div>
+                <button className="btn-signup" type="submit">Submit</button>
                 </div>
-                <button type="submit">Submit</button>
             </form>
+            <div className="row">
+            {favList}
+            </div>
         </div>
     )
 }
