@@ -6,10 +6,9 @@ const TattooShop = () => {
     
     const [searchBar, setSearchBar] = useState('')
     const [searchResults, setSearchResults] = useState('')
+    const [fave, setFave] = useState('')
 
     const majorCity = (e) => {
-        // console.log('majorCity')
-        // console.log(e.target.innerHTML);
         e.preventDefault()
         setSearchBar(e.target.innerHTML)
         axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${searchBar}`, {
@@ -27,35 +26,33 @@ const TattooShop = () => {
                 return (
                     <div className="row" key={idx}>
                         <div className="card5">
-                        <h5 className="card-title">{i.name}</h5>
+                        <a className="shopname" href={i.url}>{i.name}</a>
+                        <div className="hr"></div>
                             <p>
                                 {i.location.display_address[0]}<br></br>
                                 {i.location.display_address[1]}<br></br>
                             </p>
                         <p>Price: {i.price}</p>
                         <p>Rating: {i.rating}</p>
-                        <a className="shopname" href={i.url}>{i.name}</a>
+                        <button className="btn-faves" onClick={
+                            setFave(i.name)
+                        }>Add to Faves</button>
                         </div>
                     </div>
                 )
             }))
-            // setSearchResults(result)
         })
         .catch(err => {
             console.log(err);
         })
     }
     
-    
     const handleSubmit = (e) => {
         console.log('----Incoming Data----');
-        // console.log(`Searched For: ${searchBar}`);
-        // console.log(keys.API_KEY);
         e.preventDefault()
-        // const corsApiUrl = 'https://cors-anywhere.herokuapp.com/';
         axios.get(`https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=${searchBar}`, {
             headers: {
-                Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`
+                Authorization: `Bearer ${keys.API_KEY}`
             },
             params: {
                 term: 'tattoo'
@@ -68,19 +65,21 @@ const TattooShop = () => {
                 return (
                     <div className="row" key={idx}>
                         <div className="card5">
-                        <h5 className="card-title">{i.name}</h5>
+                        <a className="shopname" href={i.url}>{i.name}</a>
+                        <div className="hr"></div>
                             <p>
                                 {i.location.display_address[0]}<br></br>
                                 {i.location.display_address[1]}<br></br>
                             </p>
                         <p>Price: {i.price}</p>
                         <p>Rating: {i.rating}</p>
-                        <a className="shopname" href={i.url}>{i.name}</a>
+                        <button className="btn-faves" onClick={
+                            setFave(i.name)
+                        }>Add to Faves</button>
                         </div>
                     </div>
                 )
             }))
-            // setSearchResults(result)
         })
         .catch(err => {
             console.log(err);
@@ -90,10 +89,11 @@ const TattooShop = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h1 className="cities">City Search</h1>
+                <h1 className="cities title">City Search</h1>
+                <div className="hr"></div>
                 <label htmlFor="search"/>
-                <input type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } /><br/>
-                <input className="btn btn-outline-danger" type="submit" value="Search"/>
+                <input type="text" name="search" id="search" onChange={ e => setSearchBar(e.target.value) } />
+                <input className="btn btn-outline dropdown-toggle" type="submit" value="Search"/>
             </form>
             <div className="majorcitieslist">
                 <h5 className="cities">Major Cities</h5>

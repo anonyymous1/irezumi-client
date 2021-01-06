@@ -89,32 +89,25 @@ const ProfileEdit = (props) => {
 
     return(
         <div>
-            <h3>Profile Edit Page</h3>
+            <h3 className="title">Profile Edit Page</h3>
+            <div className="hr"></div>
             <form>
                 <p className="old-email">CURRENT EMAIL:  {props.user.email.toUpperCase()}</p>
                 <label/>
                 <input type="text" name="email" id="email" onChange={handleEmail} />
                 <p className="old-email">CURRENT NAME:  {props.user.name.toUpperCase()}</p>
                 <label/>
-                <input type="text" name="name" id="name" onChange={handleName} />
+                <input className="new-email-box" type="text" name="name" id="name" onChange={handleName} />
+                
                 <section className="left-side">
                     <div className="form-group">
-                        <input onChange={handleImage} type="file"/>
+                    <p className="old-email2">CHANGE YOUR PROFILE IMAGE:</p>
+                        <input className="btn-image1" onChange={handleImage} type="file"/>
                     </div>
-                    
+                <input className="btn-image2" type="submit" value="Update Profile"  onClick={dataChange}/>
                 </section>
                 <div>
-                <input type="submit" value="Update Profile"  onClick={dataChange}/>
-                </div>
-                <section className="right-side">
-                    <p>The result is here</p>
-                    {imageUrl && (
-                        <img  target="_blank" src={imageUrl} alt={imageAlt} className="displayed-image"/>
-                    )}
-                </section>
-
-                <div>
-                    <h4>Changes will take effect the next time you log in.</h4>
+                    <h4 className="disclaimer">Changes will take effect the next time you log in.</h4>
                 </div>
             </form>
         </div>

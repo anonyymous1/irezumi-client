@@ -4,18 +4,22 @@ const Profile = (props) => {
 
     console.log(props.user.imageURL);
     const userData = props.user ?
-    (<div>
-        <h1>Profile</h1>
+    (<div className="row">
+        <h1 className="title">Profile</h1>
+        <div className="hr"></div>
         <div>
-            <img src={props.user.imageURL} alt={props.user.name}/>
-            <div>
-                
-                <p><strong>Name:</strong> { props.user.name } </p>
-                <p><strong>Email:</strong> { props.user.email } <Link to="/profileedit">edit</Link></p>
-                <h3><Link to="/favorites">My Favorites</Link></h3>
-
+            <div className="user-info">
+                <div className="imageHolder">
+                    <img className="profile-img" src={props.user.imageURL} alt={props.user.name}/>
+                </div>
+                <div>
+                    <p><strong>User ID:</strong> { props.user.id.toUpperCase() } </p>
+                    <p><strong>Name:</strong> { props.user.name } </p>
+                    <p><strong>Email:</strong> { props.user.email }</p>
+                    <Link to="/profileedit">EDIT PROFILE</Link>
+                </div>
             </div>
-
+                <h3><Link to="/favorites">My Favorites</Link></h3>
         </div>
         
     </div>) : <h4>Loading...</h4>

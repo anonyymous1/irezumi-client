@@ -65,7 +65,8 @@ Remember to create branches at first was really hard when you are so zoned in on
 ### Peak at my Code
 
 PEEK OF SOME HTML CODE FOR A DISPLAY PAGE
-```<div>
+```js
+<div>
         <div className="welcome-text">
         <h1>Irezumi 入れ墨</h1>
         <h3 className="front-desc">Welcome, at Irezumi you can find the best parlors and artists around as well as gain some inspiration for tattoos that you want and the best places to go to get them done.</h3>
@@ -98,7 +99,8 @@ PEEK OF SOME HTML CODE FOR A DISPLAY PAGE
                 </div>
 ```
 CSS STYLING ADDED TO BOOTSTRAP COMPONENTS
-```.welcome-text {
+```css
+.welcome-text {
   position: absolute;
   margin-top: 250px;
   margin-left: 5%;
@@ -116,7 +118,8 @@ img {
 }
 ```
 PEEK AT CODE THAT FINDS OR CREATES STYLE AND USER INTO TWO TABLES
-```router.put('/update', (req, res)=> {
+```js
+router.put('/update', (req, res)=> {
     db.User.findOneAndUpdate(
         {_id: req.body.userID},
         {email: req.body.email, name:req.body.name, imageURL: req.body.url}, // Changed in MongoDB 4.2
