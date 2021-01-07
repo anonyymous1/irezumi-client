@@ -141,3 +141,5 @@ Here's a list of some of the functionality that we would like to add in the futu
 - Add better, more styling to the site.
 - More indepth use of mongoDB and routing.
 - Make app mobile friendly not just window scale friendly.
+
+READY FOR CODE REVIEW
